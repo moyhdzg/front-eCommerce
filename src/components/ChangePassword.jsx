@@ -8,7 +8,7 @@ const ChangePassword = () => {
     const {userData, setUserData} = useContext(userContext)
 
     const changePass = async()=>{
-        const url = 'http://localhost:4003/apis/v1/changeps'
+        const url = 'https://back-e-commerce-2.vercel.app/apis/v1/changeps'
         const result = await axios.put(url,userData)
         console.log(result)
     }

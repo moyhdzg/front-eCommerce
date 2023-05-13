@@ -7,7 +7,7 @@ const App = () => {
   const [products,setProducts] = useState([])
   
   const getProducts = async() => {
-    const url = 'http://localhost:4003/apis/v1/products'
+    const url = 'https://back-e-commerce-2.vercel.app/apis/v1/products'
     const productos = await axios.get(url)
     setProducts(productos.data)
     

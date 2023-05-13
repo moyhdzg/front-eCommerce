@@ -6,7 +6,7 @@ const Register = () => {
     const{ userData, setUserData} = useContext(userContext)
 
     const saveUser =  async()=>{
-        const url ='http://localhost:4003/apis/v1/register'
+        const url ='https://back-e-commerce-2.vercel.app/apis/v1/register'
         const result = await axios.post(url, userData)
         console.log(result)
     }

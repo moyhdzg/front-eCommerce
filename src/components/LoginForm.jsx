@@ -7,8 +7,8 @@ const LoginForm = () => {
     //const [loginForm,setLoginForm] = useState()
     const{ userData, setUserData} = useContext(userContext)
 
-    const url = 'http://localhost:4003/apis/v1/auth/login'
-    const url2 = 'http://localhost:4003/apis/v1/user/me'
+    const url = 'https://back-e-commerce-2.vercel.app/apis/v1/auth/login'
+    const url2 = 'https://back-e-commerce-2.vercel.app/apis/v1/user/me'
     const navigation = useNavigate()
     
     const handleSubmit = () =>{
