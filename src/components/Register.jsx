@@ -1,6 +1,9 @@
 import React,{useContext} from 'react'
 import axios from 'axios'
 import { userContext } from '../context/userContext'
+import Header from './Header'
+import Footer from './Footer'
+import {Button} from 'react-bootstrap'
 
 const Register = () => {
     const{ userData, setUserData} = useContext(userContext)
@@ -21,19 +24,18 @@ const Register = () => {
     }
 
     return (
-        <div>
-            <input type='text' name="name" onChange={handleChange} placeholder='Nombre/Name'/>
-            <input type='text' name="lastname" onChange={handleChange} placeholder='Apellido/Lastname'/>
-            <input type='text' name="username" onChange={handleChange} placeholder='Nombre de Usuario/Username'/>
-            <input type='text' name="email" onChange={handleChange} placeholder='Correo Electrónico/E-mail'/>
-            <input type='text' name="password" onChange={handleChange} placeholder='Contraseña/Password'/>
-            <button onClick={()=>{saveUser()}}>Crear Cuenta / Sign up</button>
-            <ul>
-                    <li><a href='/'>Ir a Home</a></li>
-                    <li><a href='/register'>Crear Cuenta / Sign Up</a></li>
-                    <li><a href='/Login'>Accesar / Sign In</a></li>
-            </ul>
-        </div>
+        <>
+            <Header /> 
+            <div>
+                <input type='text' name="name" onChange={handleChange} placeholder='Nombre/Name'/>
+                <input type='text' name="lastname" onChange={handleChange} placeholder='Apellido/Lastname'/>
+                <input type='text' name="username" onChange={handleChange} placeholder='Nombre de Usuario/Username'/>
+                <input type='text' name="email" onChange={handleChange} placeholder='Correo Electrónico/E-mail'/>
+                <input type='text' name="password" onChange={handleChange} placeholder='Contraseña/Password'/>
+                <Button variant="primary" onClick={()=>{saveUser()}}>Crear Cuenta / Sign up</Button>
+            </div>
+            <Footer />       
+        </>
     )
 }
 
