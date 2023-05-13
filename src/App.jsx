@@ -26,11 +26,18 @@ const App = () => {
   const viewProduct= async(i)=> {
     const url = `https://back-e-commerce-2.vercel.app/apis/v1/products/${i}`
     console.log(url)
-    const selection = await axios.get(url)
-    setProductData(selection.data)
-    console.log(productData)
-    navigation('/singleproductview')
-  
+    //const selection = await axios.get(url)
+    //setProductData(selection.data)
+    //console.log(productData)
+    //navigation('/singleproductview')
+    return(
+      axios.get(url)
+      .then(response =>{
+          console.log(response.data)
+          setUserData(response.data)
+          navigation('/singleproductview')
+      })
+    )
   }
 
   const addToCart = () =>{
