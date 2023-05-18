@@ -26,11 +26,11 @@ const App = () => {
   const viewProduct= async (i)=> {
     const url = `https://back-e-commerce-2.vercel.app/apis/v1/products/${i}`
     console.log(url)
-    const selection = await axios.get(url)
-    if (selection){
+    // const selection = await axios.get(url)
+    if (url){
         console.log(selection)
-        setProductData(selection.data)
-        console.log(productData)
+        //setProductData(selection.data)
+        //console.log(productData)
       // if (productData) {
       //   navigation('/singleproductview');
       } else {
@@ -80,7 +80,7 @@ const App = () => {
               </div>
             }
           </Row>
-          <Button variant="secondary" onClick={buyProducts}>Ir a Carito de Compras</Button>
+          <Button variant="secondary" onClick={buyProducts}>Ir a Carrito de Compras</Button>
         </Container>  
         <Footer />  
       </>
