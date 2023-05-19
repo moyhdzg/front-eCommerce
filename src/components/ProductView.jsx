@@ -41,9 +41,10 @@ const ProductView = () => {
 
     const navigation = useNavigate()
     
-    const goHome = ( ) => {
-        navigation('/')
+    const buyProducts = () => {
+        navigation('/login')
     }
+    
 
     useEffect(()=>{
         getProducts();
@@ -76,9 +77,7 @@ const ProductView = () => {
                                 <Card.Text>
                                     {singleProduct.price}
                                 </Card.Text>
-                                <Button variant="primary" onClick={goHome}>Regresa a los productos/Home</Button>
-                                {/* El sguiente boton te manda a login, pero la intencion es mandarlo al carrito de compras eventualmente */}
-                                <Button variant="primary">Agregar al Carrito / Add to Cart</Button> 
+                                <Button variant="primary" onClick={buyProducts}>Agregar al Carrito / Add to Cart</Button>  
                             </Card.Body>
                         </>
                         )}
