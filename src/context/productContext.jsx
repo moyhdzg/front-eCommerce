@@ -4,7 +4,7 @@ import React, { createContext, useState } from 'react'
 export const productContext = createContext({});
 
 const ProductProvider = ({children}) => {
-    const [productData, setProductData] = useState({})
+    const [productData, setProductData] = useState('')
         
     return (
         <div>

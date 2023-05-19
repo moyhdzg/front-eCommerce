@@ -23,21 +23,12 @@ const App = () => {
     navigation('/login')
   }
 
-  const viewProduct= async (i)=> {
-    const url = `https://back-e-commerce-2.vercel.app/apis/v1/products/${i}`
-    console.log(url)
-    // const selection = await axios.get(url)
-    if (url){
-        console.log(selection)
-        //setProductData(selection.data)
-        //console.log(productData)
-      // if (productData) {
-      //   navigation('/singleproductview');
-      } else {
-        console.log('No hay mano')
-      }
+  const viewProduct= (pr)=> {
+    console.log(pr)
+    setProductData(pr)
+  
   }
- 
+
 
 
   const addToCart = () =>{
@@ -47,6 +38,15 @@ const App = () => {
   useEffect(()=>{
     getProducts()
   },[]);
+
+  useEffect(() => {
+    if (productData) {
+      console.log(productData);
+      navigation('/singleproductview');
+    } else {
+      console.log('producto aun no seleccionado');
+    }
+  }, [productData]);
 
   return (
       <>
