@@ -2,13 +2,7 @@
     "rewrites": [
         { 
             "source": "/(.*)", 
-            "destination": "/",
-            "headers": [
-                {
-                  "key": "Access-Control-Allow-Origin",
-                  "value": "*"
-                }
-              ]
+            "destination": "/"
         }
     ]
 }
